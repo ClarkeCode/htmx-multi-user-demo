@@ -1,0 +1,10 @@
+<div>
+	<h1>You are at Page A</h1>
+	<p>Click the button to increment the counter and see the total persist on Page B</p>
+	<div hx-get="clickcount" hx-trigger="load, every 200ms"></div>
+	<button hx-get="/buttonclick">Click me! 🙂</button>
+
+	<hr/>
+	<button hx-get="/navigate/pageB" hx-target="#page-content">Go to Page B</button>
+	<button hx-get="/navigate/pageC" hx-target="#page-content">Go to Page C</button>
+</div>

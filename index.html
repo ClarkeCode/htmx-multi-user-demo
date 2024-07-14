@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>HTMX Demo</title>
+		<!-- Quick & Dirty Setup -->
+		<style>
+			.list-selected {background-color: lightgray;}
+			ul {
+				padding: 0px;
+				list-style-type: none;
+				width: max-content;
+			}
+		</style>
+		<link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/weh/devicon/feature/2071-htmx/icons/htmx/htmx-original.svg">
+		<script src="https://unpkg.com/htmx.org@2.0.1" integrity="sha384-QWGpdj554B4ETpJJC9z+ZHJcA/i59TyjxEPXiiUgN2WmTyV5OEZWCD6gQhgkdpB/" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div id="page-content" hx-get="current-page" hx-trigger="load"></div>
+
+		<!-- Polls endpoint to see if another user has triggered a navigation to another page -->
+		<div hx-get="page-changed" hx-trigger="every 500ms" hx-target="#page-content"></div>
+	</body>
+</html>

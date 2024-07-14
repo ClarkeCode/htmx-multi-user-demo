@@ -1,0 +1,11 @@
+<div>
+	<h1>Welcome to page C!</h1>
+	<p>See your selection from Page B persist!</p>
+	<ul id="list-content" hx-get="list-content" hx-trigger="load, every 200ms">
+		<!-- Populated on load -->
+	</ul>
+
+	<hr/>
+	<button hx-get="/navigate/pageA" hx-target="#page-content">Go to Page A</button>
+	<button hx-get="/navigate/pageB" hx-target="#page-content">Go to Page B</button>
+</div>

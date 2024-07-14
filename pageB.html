@@ -1,0 +1,20 @@
+<div>
+	<h1>Welcome to page B!</h1>
+
+	<p>Open another tab to the same address and see your selected item update simultaneously on both tabs</p>
+	<ul id="list-content" hx-get="list-content" hx-trigger="load, every 200ms">
+		<!-- Populated on load -->
+	</ul>
+	<div>
+		<button hx-put="/move-selector/up" hx-target="#list-content">^</button>
+		<button hx-put="/move-selector/down" hx-target="#list-content">v</button>
+	</div>
+	
+	<hr/>
+	<p>Increment this counter on Page A:</p>
+	<div hx-get="clickcount" hx-trigger="load, every 200ms"></div>
+
+	<hr/>
+	<button hx-get="/navigate/pageA" hx-target="#page-content">Go to Page A</button>
+	<button hx-get="/navigate/pageC" hx-target="#page-content">Go to Page C</button>
+</div>
